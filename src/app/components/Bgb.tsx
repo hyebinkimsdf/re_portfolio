@@ -17,7 +17,7 @@ export function Bgb() {
   const app = [
     { img: "", title: "테스트", link: "/about" },
     { img: "", title: "테스트2", link: "/work" },
-    { img: "", title: "테스트3" },
+    { img: "", title: "테스트3", link: "/" },
   ];
   // GSAP drag Animation
   useGSAP(
