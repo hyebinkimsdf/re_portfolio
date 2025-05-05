@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
+import Image from "next/image";
 
 gsap.registerPlugin(Draggable);
 gsap.registerPlugin(useGSAP);
@@ -13,8 +15,8 @@ export function Bgb() {
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const app = [
-    { img: "", title: "테스트" },
-    { img: "", title: "테스트2" },
+    { img: "", title: "테스트", link: "/about" },
+    { img: "", title: "테스트2", link: "/work" },
     { img: "", title: "테스트3" },
   ];
   // GSAP drag Animation
@@ -61,7 +63,9 @@ export function Bgb() {
           }}
           className="appItem w-20 h-20 rounded-xl shadow-lg bg-white text-center flex items-end justify-center py-2 cursor-grab"
         >
-          <img alt="" />
+          <Link href={item.link ?? "#"} onClick={(e) => e.stopPropagation()}>
+            <Image src={item.img} alt="..." width={80} height={80} />
+          </Link>
 
           {/* <p>{item.title}</p> */}
         </div>

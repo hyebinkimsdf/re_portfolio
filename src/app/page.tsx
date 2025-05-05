@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Bgb } from "./components/Bgb";
+import Link from "next/link";
 
 export default function Home() {
   return (
