@@ -53,7 +53,7 @@ export function Bgb() {
   return (
     <div
       ref={containerRef}
-      className="fixed bottom-10 left-1/2 transform -translate-x-1/2 flex gap-4 items-center justify-center shadow-xl w-fit h-24 px-10 py-4 rounded-2xl border-2 border-solid border-[#E5E7EB] "
+      className="fixed bottom-10 left-1/2 transform -translate-x-1/2 flex gap-4 items-center justify-center shadow-xl w-fit h-24 px-10 py-4 rounded-2xl border-2 border-solid border-[#E5E7EB] bg-white bg-opacity-60"
     >
       {app.map((item, index) => (
         <div
